@@ -3,7 +3,6 @@
 const getFormFields = require('../../../lib/get-form-fields.js')
 const authApi = require('./authApi.js')
 const authUi = require('./authUi.js')
-const engineEvents = require('../engine/engineEvents.js')
 const store = require('../store.js')
 //
 const onSignUp = function () {

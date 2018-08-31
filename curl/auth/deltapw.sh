@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/change-password" \
+curl "https://quiet-castle-23974.herokuapp.com/change-password" \
   --include \
   --request PATCH \
   --header "Authorization: Token token=${TOKEN}" \
