@@ -8,7 +8,6 @@ const store = require('../store.js')
 const onSignUp = function () {
   event.preventDefault()
   const data = getFormFields(event.target)
-  //
   authApi.signUp(data)
     .then(authUi.signUpSuccess)
     .catch(authUi.signUpFail)
