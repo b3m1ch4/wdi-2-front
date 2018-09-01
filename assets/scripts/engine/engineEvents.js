@@ -3,9 +3,6 @@ let getFormFields = require('../../../lib/get-form-fields.js')
 let engineApi = require('./engineApi.js')
 let engineUi = require('./engineUi.js')
 let store = require('../store.js')
-
-<<<<<<< Updated upstream
-=======
 //
 const onAllGigs = function (event) {
   event.preventDefault()
@@ -48,7 +45,6 @@ const onAllGigs = function (event) {
 // }
 //
 
->>>>>>> Stashed changes
 // event listeners
 let engineHandlers = function () {
   $('#gig-index').on('click', onAllGigs)

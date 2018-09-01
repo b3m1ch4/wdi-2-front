@@ -1,9 +1,6 @@
 'use strict'
 /* ===== required files ===== */
 let store = require('../store')
-<<<<<<< Updated upstream
-
-=======
 //
 const apiFail = function (response) {
     response.preventDefault()
@@ -21,7 +18,6 @@ const indexSuccess = function (response) {
 //
 
 //
->>>>>>> Stashed changes
 const apiUpdate = function (response) {
   store = response
 }
