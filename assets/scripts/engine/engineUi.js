@@ -2,10 +2,18 @@
 /* ===== required files ===== */
 let store = require('../store')
 //
+const gigCreate = function () {
+  store.gig = response.gig
+  $('#user-message').html("your event was created!")
+}
+//
 const indexSuccess = function (response) {
   response.gigs.forEach((gig) => {
-  let gigId = gig.id
-  $('#gigs-display').html("gig id is ", gigId)
+  $('#gigs-display').append("gig id is: ", gig.id + " ")
+  $('#gigs-display').append("gig title is: ", gig.title + " ")
+  $('#gigs-display').append("gig date is: ", gig.date + " ")
+  $('#gigs-display').append("gig time is: ", gig.time + " ")
+  $('#gigs-display').append("gig id is: ", gig.description + " ")
   })
 }
 //

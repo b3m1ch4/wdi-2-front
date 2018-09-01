@@ -4,6 +4,15 @@ let engineApi = require('./engineApi.js')
 let engineUi = require('./engineUi.js')
 let store = require('../store.js')
 //
+/* onNewGig creates a new gig in the Api */
+let onNewGig = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  engineApi.newGig(data)
+  .then(engineUi.gigCreate)
+  .catch(engineUi.apiFail)
+}
+//
 const onAllGigs = function (event) {
   event.preventDefault()
   engineApi.allGigs()
@@ -18,14 +27,7 @@ const onAllGigs = function (event) {
 //   .then(gigUi.findGig)
 //   .catch(gigUi.apiFail)
 // }
-// onNewGig creates a new gig in the Api
-// let onNewGig = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   gigApi.newGig(data)
-//   .then(gigUi.gigStart)
-//   .catch(gigUi.apiFail)
-// }
+
 // onPatchGig updates the api with the gigBoard's info
 // let onPatchGig = function (event) {
 //   event.preventDefault()
@@ -48,6 +50,7 @@ const onAllGigs = function (event) {
 // event listeners
 let engineHandlers = function () {
   $('#gig-index').on('click', onAllGigs)
+  $('#gig-maker').on('submit', onNewGig)
 }
 //
 module.exports = {
