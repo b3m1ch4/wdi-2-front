@@ -11,13 +11,12 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-      <h1>bandmate event tracker</h1>
+      <body>
 
-            <div class="message" id="user-message"></div>
-
-
-            <form class="border" id="sign-up">
+      <div class="jumbotron text-center" style="margin-bottom:0">
+        <h1>bandmate event tracker</h1>
+        <p>Herd all of those crazy musicians!</p>
+      </div>
 
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <a class="navbar-brand" href="#">Cue</a>
@@ -93,19 +92,45 @@
                      </fieldset>
                      </form>
 
-                  <form class="border logged-in" id="sign-out">
+                  <form class="border" id="sign-out">
                     <fieldset>
                       <button type="submit">sign out</button>
                     </fieldset>
                   </form>
 
+            <form class="border logged-in" id="gig-index">
+              <fieldset>
+                <button type="submit">index</button>
+              </fieldset>
+            </form>
+
+            <form class="border logged-in" id="gig-finder">
+              <fieldset>
+                <button type="submit">search</button>
+              </fieldset>
+            </form>
+
+            <form class="border logged-in" id="gig-changer">
+              <fieldset>
+                <button type="submit">change</button>
+              </fieldset>
+            </form>
+
+            <form class="border logged-in" id="gig-deleter">
+              <fieldset>
+                <button type="submit">delete</button>
+              </fieldset>
+            </form>
 
       <footer>
-        <h6>Impressum</h6>
-        <p>Michael Francis H Brown </p>
-        <p>Somerville, MA </p>
-        <p>Email: michael@michaelcodes.it</p>
-        <p>Look for me on <a href="https://github.com/b3m1ch4">GitHub</a></p>
+        <div class="jumbotron text-center" style="margin-bottom:0">
+          <p>Footer</p>
+          <h6>Impressum</h6>
+          <p>Michael Francis H Brown </p>
+          <p>Somerville, MA </p>
+          <p>Email: michael@michaelcodes.it</p>
+          <p>Look for me on <a href="https://github.com/b3m1ch4">GitHub</a></p>
+        </div>
       </footer>
 
     </body>
