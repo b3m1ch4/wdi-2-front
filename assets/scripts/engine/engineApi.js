@@ -13,7 +13,7 @@ const allGigs = function () {
   })
 }
 // get one past Gig
-const oneGig = function (id) {
+const oneGig = function () {
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/gigs/' + id,

@@ -20,14 +20,14 @@ const onAllGigs = function (event) {
     .catch(engineUi.apiFail)
 }
 //
-// const onFindGig = function (event) {
-//   event.preventDefault()
-//   const id = $('#find-gig input').val()
-//   gigApi.oneGig(id)
-//   .then(gigUi.findGig)
-//   .catch(gigUi.apiFail)
-// }
-
+const onFindGig = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  engineApi.oneGigs(data)
+  .then(engineUi.findSuccess)
+  .catch(engineUi.apiFail)
+}
+//
 // onPatchGig updates the api with the gigBoard's info
 // let onPatchGig = function (event) {
 //   event.preventDefault()
@@ -42,8 +42,8 @@ const onAllGigs = function (event) {
 //   }
 // }
 //   gigApi.patchGig(data)
-//   .then(gigUi.apiUpdate)
-//   .catch(gigUi.apiFail)
+//   .then(engineUi.apiUpdate)
+//   .catch(engineUi.apiFail)
 // }
 //
 
@@ -51,6 +51,7 @@ const onAllGigs = function (event) {
 let engineHandlers = function () {
   $('#gig-index').on('click', onAllGigs)
   $('#gig-maker').on('submit', onNewGig)
+  $('#gig-finder').on('submit', onFindGig)
 }
 //
 module.exports = {
