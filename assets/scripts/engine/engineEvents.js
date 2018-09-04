@@ -22,12 +22,22 @@ const onAllGigs = function (event) {
 //
 const onFindGig = function (event) {
   event.preventDefault()
-  let gigId = $("#gig-finder input").val()
-  store.search = gigId
-  engineApi.oneGig(gigId)
+  const data = getFormFields(event.target)
+  store.search = data
+  engineApi.oneGig(data)
   .then(engineUi.findSuccess)
   .catch(engineUi.apiFail)
 }
+//
+// const onFindGig = function (event) {
+//   event.preventDefault()
+//   let gigId = $("#gig-finder input").val()
+//   store.search = gigId
+//   console.log(store.search)
+//   engineApi.oneGig(gigId)
+//   .then(engineUi.findSuccess)
+//   .catch(engineUi.apiFail)
+// }
 //
 // onPatchGig updates the api with the gigBoard's info
 // let onPatchGig = function (event) {

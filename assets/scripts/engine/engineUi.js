@@ -19,8 +19,8 @@ const indexSuccess = function (response) {
 }
 //
 const findSuccess = function (response) {
-  console.log(store.search)
   console.log(response)
+  // $('#gigs-display').append("gig id is: ", gig.id + " ")
 }
 //
 const apiFail = function (response) {
@@ -33,5 +33,8 @@ const apiUpdate = function (response) {
 }
 //
 module.exports = {
-  indexSuccess
+  apiFail,
+  indexSuccess,
+  findSuccess,
+  apiUpdate
 }
