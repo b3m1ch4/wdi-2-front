@@ -1,14 +1,14 @@
-{{#each books as |book|}}
-  {{log book}}
+{{#each gigs as |gig|}}
+  {{log gig}}
   <!-- {{> partial}}
   Don't uncomment yet -->
 
   <div>
-    <h1 data-id="{{book.id}}"> <small>Title: {{book.title}}</small></h1>
-    {{#if book.author}}
-      {{book.author}}
-    {{else}}
-      No author provided.
+    <h1 data-id="{{book.id}}"> <small>Title: {{gig.title}}</small></h1>
+    {{#if gig.date}}
+      {{gig.time}}
+    <!-- {{else}}
+      No author provided. -->
     {{/if}}
   </div>
 
