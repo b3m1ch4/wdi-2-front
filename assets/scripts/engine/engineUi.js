@@ -1,20 +1,16 @@
 'use strict'
 /* ===== required files ===== */
 let store = require('../store')
+const showGigsTemplate = require('../templates/helpers/gig-listing.handlebars')
 //
 const gigCreate = function () {
   store.gig = response.gig
   $('#user-message').html("your event was created!")
 }
 //
-const indexSuccess = function (response) {
-  response.gigs.forEach((gig) => {
-  $('#gigs-display').append("gig id is: ", gig.id + " ")
-  $('#gigs-display').append("gig title is: ", gig.title + " ")
-  $('#gigs-display').append("gig date is: ", gig.date + " ")
-  $('#gigs-display').append("gig time is: ", gig.time + " ")
-  $('#gigs-display').append("gig id is: ", gig.description + " ")
-  })
+const indexSuccess = function (data) {
+  const showGigsHtml = showGigsTemplate({ gigs: data.gigs })
+  $('#gigs-display').append(showGigsHtml)
 }
 //
 const apiFail = function (response) {

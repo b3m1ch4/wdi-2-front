@@ -19,14 +19,14 @@ const onAllGigs = function (event) {
     .then(engineUi.indexSuccess)
     .catch(engineUi.apiFail)
 }
-//
-// const onFindGig = function (event) {
-//   event.preventDefault()
-//   const id = $('#find-gig input').val()
-//   gigApi.oneGig(id)
-//   .then(gigUi.findGig)
-//   .catch(gigUi.apiFail)
-// }
+
+const onFindGig = function (event) {
+  event.preventDefault()
+  const id = $('#find-gig input').val()
+  gigApi.oneGig(id)
+  .then(gigUi.findGig)
+  .catch(gigUi.apiFail)
+}
 
 // onPatchGig updates the api with the gigBoard's info
 // let onPatchGig = function (event) {

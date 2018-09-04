@@ -74,28 +74,26 @@
                     </fieldset>
                   </form>
 
-      <div class="container" style="margin-top:30px">
+      <div class="container logged-in" style="margin-top:30px">
         <div class="row">
           <div class="col-sm-4">
-            <h2>USER NAME</h2>
-            <h5>Member of band X</h5>
 
-            <h3>Gig Index:</h3>
-            <ul class="nav nav-pills flex-column">
-            <div class="logged-in" id="gigs-display"></div>
-            </ul>
-            <hr class="d-sm-none">
-          </div>
-          <div class="col-sm-8">
             <h2>Gig Maker</h2>
             <h5>Make a gig!</h5>
+            <form class="border" id="gig-finder">
+              <fieldset>
+                <input type ="integer" name="gigs[id]" placeholder ="gig id">
+                <button type="submit">search</button>
+              </fieldset>
+            </form>
+
             <form class="border logged-in" id="gig-index">
               <fieldset>
                 <button type="submit">index</button>
               </fieldset>
             </form>
 
-            <form class="border logged-in" id="gig-maker">
+            <form class="border" id="gig-maker">
               <fieldset>
               <legend>create a gig</legend>
               <input type ="text" name="gig[title]" placeholder ="Name me">
@@ -106,29 +104,40 @@
               <button type="submit">create</button>
             </fieldset>
             </form>
-            <form class="border logged-in" id="gig-finder">
-              <fieldset>
-                <input type ="integer" name="gigs[id]" placeholder ="gig id">
-                <button type="submit">search</button>
-              </fieldset>
-            </form>
 
-            <form class="border logged-in" id="gig-changer">
+
+            <form class="border" id="gig-changer">
               <fieldset>
                 <button type="submit">change</button>
               </fieldset>
             </form>
 
-            <form class="border logged-in" id="gig-deleter">
+            <form class="border" id="gig-deleter">
               <fieldset>
                 <button type="submit">delete</button>
               </fieldset>
             </form>
 
+          </div>
+
+
+          <div class="col-sm-8 logged-in">
+
+            <h2>USER NAME</h2>
+            <h5>Member of band X</h5>
+
+            <h3>Gig Index:</h3>
+            <ul class="nav nav-pills flex-column">
+            <div class="col-sm-8" id="gigs-display"></div>
+            </ul>
+            <hr class="d-sm-none">
+
             <br>
             <h2>Another div?</h2>
             <h5></h5>
+
         </div>
+      </div>
       </div>
 
       <footer>
