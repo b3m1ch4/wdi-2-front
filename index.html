@@ -40,7 +40,7 @@
 
       <div class="message" id="user-message"></div>
 
-                  <form class="border" id="sign-up">
+                  <form class="border eingabe" id="sign-up">
                     <fieldset>
                       <legend>sign up</legend>
                       <input type ="email" name="credentials[email]" placeholder ="email">
@@ -50,7 +50,7 @@
                     </fieldset>
                   </form>
 
-                  <form class="border" id="sign-in">
+                  <form class="border eingabe" id="sign-in">
                     <fieldset>
                     <legend>sign in</legend>
                     <input type ="email" name="credentials[email]" placeholder ="email">
@@ -59,7 +59,7 @@
                   </fieldset>
                   </form>
 
-                  <form class="border" id="change-password">
+                  <form class="border eingabe" id="change-password">
                        <fieldset>
                        <legend>change password</legend>
                        <input type ="password" name="passwords[old]" placeholder ="old password">
@@ -68,32 +68,32 @@
                      </fieldset>
                      </form>
 
-                  <form class="border" id="sign-out">
+                  <form class="border eingabe" id="sign-out">
                     <fieldset>
                       <button type="submit">sign out</button>
                     </fieldset>
                   </form>
 
-      <div class="container logged-in" style="margin-top:30px">
+      <div class="container logged-in eingabe" style="margin-top:30px">
         <div class="row">
           <div class="col-sm-4">
 
             <h2>Gig Maker</h2>
             <h5>Make a gig!</h5>
-            <form class="border" id="gig-finder">
+            <form class="border eingabe" id="gig-finder">
               <fieldset>
                 <input type ="integer" name="gigs[id]" placeholder ="gig id">
                 <button type="submit">search</button>
               </fieldset>
             </form>
 
-            <form class="border logged-in" id="gig-index">
+            <form class="border logged-in eingabe" id="gig-index">
               <fieldset>
                 <button type="submit">index</button>
               </fieldset>
             </form>
 
-            <form class="border" id="gig-maker">
+            <form class="border eingabe" id="gig-maker">
               <fieldset>
               <legend>create a gig</legend>
               <input type ="text" name="gig[title]" placeholder ="Name me">
@@ -106,14 +106,15 @@
             </form>
 
 
-            <form class="border" id="gig-changer">
+            <form class="border eingabe" id="gig-changer">
               <fieldset>
                 <button type="submit">change</button>
               </fieldset>
             </form>
 
-            <form class="border" id="gig-deleter">
+            <form class="border eingabe" id="gig-deleter">
               <fieldset>
+                  <input type ="integer" name="gigs[id]" placeholder ="gig id">
                 <button type="submit">delete</button>
               </fieldset>
             </form>
@@ -126,9 +127,9 @@
             <h2>USER NAME</h2>
             <h5>Member of band X</h5>
 
-            <h3>Gig Index:</h3>
+            <h3>Gig Display:</h3>
             <ul class="nav nav-pills flex-column">
-            <div class="col-sm-8" id="gigs-display"></div>
+            <div class="col-sm-8 eingabe" id="gigs-display"></div>
             </ul>
             <hr class="d-sm-none">
 

@@ -67,7 +67,7 @@ let engineHandlers = function () {
   $('#gig-index').on('click', onAllGigs)
   $('#gig-maker').on('submit', onNewGig)
   $('#gig-finder').on('submit', onFindGig)
-  $('').on('submit', onDeleteGig)
+  $('#gig-deleter').on('submit', onDeleteGig)
 }
 
 //
