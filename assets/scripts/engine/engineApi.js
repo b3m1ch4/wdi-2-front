@@ -13,10 +13,10 @@ const allGigs = function () {
   })
 }
 // get one past Gig
-const oneGig = function (id) {
+const oneGig = function (data) {
   return $.ajax({
     method: 'GET',
-    url: config.apiUrl + '/gigs/' + id,
+    url: config.apiUrl + '/gigs/' + data.gigs.id,
     headers: {
       'Authorization': 'Token token=' + store.user.token
     }

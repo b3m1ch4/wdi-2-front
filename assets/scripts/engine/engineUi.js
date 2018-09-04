@@ -8,6 +8,7 @@ const gigCreate = function () {
 }
 //
 const indexSuccess = function (response) {
+  console.log(response)
   response.gigs.forEach((gig) => {
   $('#gigs-display').append("gig id is: ", gig.id + " ")
   $('#gigs-display').append("gig title is: ", gig.title + " ")
@@ -15,6 +16,11 @@ const indexSuccess = function (response) {
   $('#gigs-display').append("gig time is: ", gig.time + " ")
   $('#gigs-display').append("gig id is: ", gig.description + " ")
   })
+}
+//
+const findSuccess = function (response) {
+  console.log(response)
+  // $('#gigs-display').append("gig id is: ", gig.id + " ")
 }
 //
 const apiFail = function (response) {
@@ -27,5 +33,8 @@ const apiUpdate = function (response) {
 }
 //
 module.exports = {
-  indexSuccess
+  apiFail,
+  indexSuccess,
+  findSuccess,
+  apiUpdate
 }
