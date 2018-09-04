@@ -24,9 +24,9 @@ const indexSuccess = function (data) {
   $('#gigs-display').append(showGigsHtml)
 }
 //
-const findSuccess = function (response) {
-  console.log(response)
-  // $('#gigs-display').append("gig id is: ", gig.id + " ")
+const findSuccess = function (data) {
+  const showGigsHtml = showGigsTemplate({ gigs: data })
+  $('#gigs-display').html(showGigsHtml)
 }
 //
 const apiFail = function (response) {
