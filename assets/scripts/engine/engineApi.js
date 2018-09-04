@@ -13,7 +13,8 @@ const allGigs = function () {
   })
 }
 // get one past Gig
-const oneGig = function () {
+const oneGig = function (id) {
+  console.log("before", id)
   return $.ajax({
     method: 'GET',
     url: config.apiUrl + '/gigs/' + id,
@@ -21,6 +22,7 @@ const oneGig = function () {
       'Authorization': 'Token token=' + store.user.token
     }
   })
+  console.log("after", id)
 }
 // create a gig
 const newGig = function (data) {

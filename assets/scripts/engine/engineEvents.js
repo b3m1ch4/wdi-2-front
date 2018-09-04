@@ -22,8 +22,9 @@ const onAllGigs = function (event) {
 //
 const onFindGig = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  engineApi.oneGigs(data)
+  let gigId = $("#gig-finder input").val()
+  store.search = gigId
+  engineApi.oneGig(gigId)
   .then(engineUi.findSuccess)
   .catch(engineUi.apiFail)
 }
@@ -41,7 +42,7 @@ const onFindGig = function (event) {
 //     "cancelled": false
 //   }
 // }
-//   gigApi.patchGig(data)
+//   engineApi.patchGig(data)
 //   .then(engineUi.apiUpdate)
 //   .catch(engineUi.apiFail)
 // }

@@ -19,8 +19,8 @@ const indexSuccess = function (response) {
 }
 //
 const findSuccess = function (response) {
-  console.log(response.gigs)
-  console.log(store.searchId)
+  console.log(store.search)
+  console.log(response)
 }
 //
 const apiFail = function (response) {
