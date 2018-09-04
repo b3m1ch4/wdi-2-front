@@ -1,8 +1,9 @@
 'use strict'
-// required files
+/* ===== required files ===== */
 let config = require('../config.js')
 let store = require('../store.js')
-// create a gig
+
+/* ===== create one gig ===== */
 const newGig = function (data) {
   return $.ajax({
     method: 'POST',
@@ -14,7 +15,7 @@ const newGig = function (data) {
   })
 }
 
-// get all past gigs
+/* ===== show all gigs ===== */
 const allGigs = function () {
   return $.ajax({
     method: 'GET',
@@ -24,7 +25,8 @@ const allGigs = function () {
     }
   })
 }
-// get one past Gig
+
+/* ===== show one gig  ===== */
 const oneGig = function (data) {
   return $.ajax({
     method: 'GET',
@@ -35,7 +37,7 @@ const oneGig = function (data) {
   })
 }
 
-// update gig
+/* ===== update one gig ===== */
 const patchGig = function (data) {
   return $.ajax({
     method: 'PATCH',
@@ -47,7 +49,8 @@ const patchGig = function (data) {
     }
   })
 }
-//
+
+/* ===== delete a gig ===== */
 const deleteGig = function (data) {
   return $.ajax({
     url: config.apiUrl + data.gigs.id,
@@ -58,10 +61,12 @@ const deleteGig = function (data) {
     }
   })
 }
+
 //
 module.exports = {
+  newGig,
   allGigs,
   oneGig,
-  newGig,
-  patchGig
+  patchGig,
+  deleteGig
 }

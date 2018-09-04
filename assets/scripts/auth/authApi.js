@@ -1,7 +1,9 @@
 'use strict'
-// required files
+
+/* ===== required files ===== */
 const config = require('../config.js')
 const store = require('../store.js')
+
 //
 const signUp = function (data) {
   return $.ajax({
@@ -10,6 +12,7 @@ const signUp = function (data) {
     data
   })
 }
+
 //
 const signIn = function (data) {
   return $.ajax({
@@ -18,6 +21,7 @@ const signIn = function (data) {
     data
   })
 }
+
 //
 const changePassword = function (data) {
   return $.ajax({
@@ -29,6 +33,7 @@ const changePassword = function (data) {
     data
   })
 }
+
 //
 const signOut = function (data) {
   return $.ajax({
@@ -40,6 +45,7 @@ const signOut = function (data) {
     data
   })
 }
+
 //
 module.exports = {
   signUp,

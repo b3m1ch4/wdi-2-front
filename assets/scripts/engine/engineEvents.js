@@ -1,25 +1,29 @@
 'use strict'
+
+/* ===== required files ===== */
 let getFormFields = require('../../../lib/get-form-fields.js')
 let engineApi = require('./engineApi.js')
 let engineUi = require('./engineUi.js')
 let store = require('../store.js')
-//
-/* onNewGig creates a new gig in the Api */
+
+/* ===== create one gig ===== */
 let onNewGig = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   engineApi.newGig(data)
-  .then(engineUi.gigCreate)
+  .then(engineUi.createSuccess)
   .catch(engineUi.apiFail)
 }
-//
+
+/* ===== show all gigs ===== */
 const onAllGigs = function (event) {
   event.preventDefault()
   engineApi.allGigs()
     .then(engineUi.indexSuccess)
     .catch(engineUi.apiFail)
 }
-//
+
+/* ===== show one gig  ===== */
 const onFindGig = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -28,17 +32,8 @@ const onFindGig = function (event) {
   .then(engineUi.findSuccess)
   .catch(engineUi.apiFail)
 }
-//
-// const onFindGig = function (event) {
-//   event.preventDefault()
-//   let gigId = $("#gig-finder input").val()
-//   store.search = gigId
-//   console.log(store.search)
-//   engineApi.oneGig(gigId)
-//   .then(engineUi.findSuccess)
-//   .catch(engineUi.apiFail)
-// }
-//
+
+/* ===== update one gig ===== */
 // onPatchGig updates the api with the gigBoard's info
 // let onPatchGig = function (event) {
 //   event.preventDefault()
@@ -56,14 +51,25 @@ const onFindGig = function (event) {
 //   .then(engineUi.apiUpdate)
 //   .catch(engineUi.apiFail)
 // }
-//
+
+/* ===== delete a gig ===== */
+const onDeleteGig = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  store.search = data
+  engineApi.deleteGig(data)
+  .then(engineUi.deleteSuccess)
+  .catch(engineUi.apiFail)
+}
 
 // event listeners
 let engineHandlers = function () {
   $('#gig-index').on('click', onAllGigs)
   $('#gig-maker').on('submit', onNewGig)
   $('#gig-finder').on('submit', onFindGig)
+  $('').on('submit', onDeleteGig)
 }
+
 //
 module.exports = {
   engineHandlers
