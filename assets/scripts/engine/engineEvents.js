@@ -37,15 +37,6 @@ const onFindGig = function (event) {
 let onUpdateGig = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log("data is", data)
-  // const data = {
-  // "gig": {
-  //   "cell": {
-  //     "index": i,
-  //     "value": gigLogic.current.player
-  //   },
-  // }
-// }
   engineApi.patchGig(data)
   .then(engineUi.updateSuccess)
   .catch(engineUi.apiFail)
@@ -63,6 +54,8 @@ const onDeleteGig = function (event) {
 
 /* ===== toggles ===== */
 const onComposeToggle = function () {
+  $('.eingabe input').val('')
+  $('#gigs-display').html('')
   $('#gig-index').hide()
   $('#gig-finder').hide()
   $('#gig-changer').hide()
@@ -75,6 +68,8 @@ const onComposeToggle = function () {
   }
 
 const onCueToggle = function () {
+  $('.eingabe input').val('')
+  $('#gigs-display').html('')
   $('#gig-index').show()
   $('#gig-finder').show()
   $('#gig-changer').hide()
@@ -87,6 +82,8 @@ const onCueToggle = function () {
 }
 
 const onModulateToggle = function () {
+  $('.eingabe input').val('')
+  $('#gigs-display').html('')
   $('#gig-index').hide()
   $('#gig-finder').hide()
   $('#gig-changer').show()

@@ -5,16 +5,16 @@ const store = require('../store.js')
 //
 const signUpSuccess = function () {
   $('#user-message').text('registration success!')
-  $('#user-message').removeClass()
-  $('#user-message').addClass('success')
+  // $('#user-message').removeClass()
+  // $('#user-message').addClass('success')
   $('#sign-up input').val('')
 }
 
 //
 const signUpFail = function () {
   $('#user-message').text('registration failure :(')
-  $('#user-message').removeClass()
-  $('#user-message').addClass('fail')
+  // $('#user-message').removeClass()
+  // $('#user-message').addClass('fail')
   $('#sign-up input').val('')
 }
 
@@ -22,8 +22,8 @@ const signUpFail = function () {
 const signInSuccess = function (response) {
   store.user = response.user
   $('#user-message').text('welcome back ' + store.user.email + ' !')
-  $('#user-message').removeClass()
-  $('#user-message').addClass('success')
+  // $('#user-message').removeClass()
+  // $('#user-message').addClass('success')
   $('.nav-link').show()
   $('.logged-in').show()
   $('.logged-out').hide()

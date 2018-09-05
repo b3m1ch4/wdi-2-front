@@ -49,6 +49,7 @@ const onJoinToggle = function () {
 //
 const onSettingsToggle = function () {
   $('#verwaltung').hide()
+  $('#gigs-display').hide()
   $('#change-password').show()
 }
 

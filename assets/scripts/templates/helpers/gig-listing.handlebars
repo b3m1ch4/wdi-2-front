@@ -1,3 +1,4 @@
+{{#if gigs}}
 {{#each gigs as |gig|}}
 
   <div class="row">
@@ -10,8 +11,11 @@
        Gig creator: {{gig.user.email}}
 
     {{else}}
-      This gig is incomplete.
+      <p> Please note, the request you made could not be processed. </p>
     {{/if}}
   </div>
-
 {{/each}}
+
+{{else}}
+  There are no gigs at the moment
+{{/if}}
