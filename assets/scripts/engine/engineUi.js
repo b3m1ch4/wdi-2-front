@@ -13,7 +13,6 @@ const apiFail = function (response) {
 
 /* ===== create one gig ===== */
 const createSuccess = function () {
-  store.gig = response.gig
   $('#user-message').html("the event was successfully created!")
   $('.eingabe input').val('')
 }
@@ -33,8 +32,9 @@ const findSuccess = function (data) {
 }
 
 /* ===== update one gig ===== */
-const apiUpdate = function (response) {
-  store = response
+const updateSuccess = function (response) {
+  $('#user-message').html("this event was successfully updated")
+  $('.eingabe input').val('')
 }
 /* ===== delete a gig ===== */
 const deleteSuccess = function () {
@@ -48,6 +48,6 @@ module.exports = {
   createSuccess,
   indexSuccess,
   findSuccess,
-  apiUpdate,
+  updateSuccess,
   deleteSuccess
 }

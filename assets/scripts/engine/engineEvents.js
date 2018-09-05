@@ -34,28 +34,28 @@ const onFindGig = function (event) {
 }
 
 /* ===== update one gig ===== */
-// onPatchGig updates the api with the gigBoard's info
-// let onPatchGig = function (event) {
-//   event.preventDefault()
-//   let i = event.target.id.slice(0, 1)
-//   const data = {
-//   "gig": {
-//     "cell": {
-//       "index": i,
-//       "value": gigLogic.current.player
-//     },
-//     "cancelled": false
-//   }
+let onUpdateGig = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  console.log("data is", data)
+  // const data = {
+  // "gig": {
+  //   "cell": {
+  //     "index": i,
+  //     "value": gigLogic.current.player
+  //   },
+  // }
 // }
-//   engineApi.patchGig(data)
-//   .then(engineUi.apiUpdate)
-//   .catch(engineUi.apiFail)
-// }
+  engineApi.patchGig(data)
+  .then(engineUi.updateSuccess)
+  .catch(engineUi.apiFail)
+}
 
 /* ===== delete a gig ===== */
 const onDeleteGig = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
+  console.log("data is", data)
   engineApi.deleteGig(data)
   .then(engineUi.deleteSuccess)
   .catch(engineUi.apiFail)
@@ -66,6 +66,7 @@ let engineHandlers = function () {
   $('#gig-index').on('click', onAllGigs)
   $('#gig-maker').on('submit', onNewGig)
   $('#gig-finder').on('submit', onFindGig)
+  $('#gig-changer').on('submit', onUpdateGig)
   $('#gig-deleter').on('submit', onDeleteGig)
 }
 

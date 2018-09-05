@@ -41,7 +41,7 @@ const oneGig = function (data) {
 const patchGig = function (data) {
   return $.ajax({
     method: 'PATCH',
-    url: config.apiUrl + '/gigs/' + store.Gig.id,
+    url: config.apiUrl + '/gigs/' + data.gigs.id,
     data,
     headers: {
       'Authorization': 'Token token=' + store.user.token,

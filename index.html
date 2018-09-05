@@ -97,7 +97,7 @@
               <fieldset>
               <legend>create a gig</legend>
               <input type ="text" name="gig[title]" placeholder ="Name me">
-              <input type ="date" name="gig[date]" placeholder ="YEAR-MN-DY" id="gig-date">
+              <input type ="date" name="gig[date]" placeholder ="YEAR-MN-DY">
               <input type ="time" name="gig[time]" placeholder ="HH:MM">
               <input type ="text" name="gig[texttime]" placeholder ="Time">
               <input type ="text" name="gig[description]" placeholder ="Lorem ipsum">
@@ -108,14 +108,21 @@
 
             <form class="border eingabe" id="gig-changer">
               <fieldset>
-                <button type="submit">change</button>
+              <legend>change a gig</legend>
+              <input type ="integer" name="gigs[id]" placeholder ="gig id">
+              <input type ="text" name="gig[title]" placeholder ="Name me">
+              <input type ="date" name="gig[date]" placeholder ="YEAR-MN-DY">
+              <input type ="time" name="gig[time]" placeholder ="HH:MM">
+              <input type ="text" name="gig[texttime]" placeholder ="Time">
+              <input type ="text" name="gig[description]" placeholder ="Lorem ipsum">
+              <button type="submit">change</button>
               </fieldset>
             </form>
 
             <form class="border eingabe" id="gig-deleter">
               <fieldset>
-                  <input type ="integer" name="gigs[id]" placeholder ="gig id">
-                <button type="submit">delete</button>
+              <input type ="integer" name="gigs[id]" placeholder ="gig id">
+              <button type="submit">delete</button>
               </fieldset>
             </form>
 
