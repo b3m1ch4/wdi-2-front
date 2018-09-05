@@ -1,6 +1,43 @@
 @import '~bootstrap/scss/bootstrap';
-#sign-up {
-  
+
+.logged-in {
+  display: none;
+}
+
+.logged-out {
+
+}
+
+.nav-link {
+  display: none;
+}
+
+#change-password {
+  display: none;
+}
+
+#gig-maker {
+  display: none;
+}
+
+#gig-finder {
+  display: none;
+}
+
+#gig-index {
+  display: none;
+}
+
+#gig-changer {
+  display: none;
+}
+
+#gig-deleter {
+  display: none;
+}
+
+#gigs-display {
+  display: none;
 }
 
 #sign-in {
@@ -11,10 +48,10 @@
   display: none;
 }
 
-#change-password {
+#sign-up {
   display: none;
 }
 
-.logged-in {
+#verwaltung {
   display: none;
 }

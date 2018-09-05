@@ -7,7 +7,7 @@ const showGigsTemplate = require('../templates/helpers/gig-listing.handlebars')
 /* ===== failure to connect to server ===== */
 const apiFail = function (response) {
     response.preventDefault()
-    $('#user-message').html('Hopla! There was a problem connecting to the server. <p> Please try again later. </p>')
+    $('#user-message').html('Hopla! There was a problem connecting to the server.')
     $('.eingabe input').val('')
 }
 
@@ -20,7 +20,7 @@ const createSuccess = function () {
 /* ===== show all gigs ===== */
 const indexSuccess = function (data) {
   const showGigsHtml = showGigsTemplate({ gigs: data.gigs })
-  $('#gigs-display').append(showGigsHtml)
+  $('#gigs-display').html(showGigsHtml)
   $('.eingabe input').val('')
 }
 

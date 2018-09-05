@@ -61,6 +61,34 @@ const onDeleteGig = function (event) {
   .catch(engineUi.apiFail)
 }
 
+/* ===== toggles ===== */
+const onComposeToggle = function () {
+  $('#gig-index').hide()
+  $('#gig-finder').hide()
+  $('#gig-changer').hide()
+  $('#gig-deleter').hide()
+  $('#gig-maker').show()
+  $('#sign-up input').val('')
+  }
+
+const onCueToggle = function () {
+  $('#gig-index').show()
+  $('#gig-finder').show()
+  $('#gig-changer').hide()
+  $('#gig-deleter').hide()
+  $('#gig-maker').hide()
+  $('#sign-up input').val('')
+}
+
+const onModulateToggle = function () {
+  $('#gig-index').hide()
+  $('#gig-finder').hide()
+  $('#gig-changer').show()
+  $('#gig-deleter').show()
+  $('#gig-maker').hide()
+  $('#sign-up input').val('')
+}
+
 // event listeners
 let engineHandlers = function () {
   $('#gig-index').on('click', onAllGigs)
@@ -68,6 +96,9 @@ let engineHandlers = function () {
   $('#gig-finder').on('submit', onFindGig)
   $('#gig-changer').on('submit', onUpdateGig)
   $('#gig-deleter').on('submit', onDeleteGig)
+  $('#compose-toggle').on('click', onComposeToggle)
+  $('#cue-toggle').on('click', onCueToggle)
+  $('#modulate-toggle').on('click', onModulateToggle)
 }
 
 //

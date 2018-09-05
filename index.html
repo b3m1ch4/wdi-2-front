@@ -19,20 +19,24 @@
       </div>
 
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">Cue</a>
+        <a class="navbar-brand" href="#">Bandmate</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Join</a>
+              <a class="nav-link" href="#" id="compose-toggle">Compose</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Enter</a>
+              <a class="nav-link" href="#" id="cue-toggle">Cue</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Leave</a>
+              <a class="nav-link" href="#" id="modulate-toggle">Modulate</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="settings-toggle">Settings</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="sign-out">Sign Out</a>
             </li>
           </ul>
         </div>
@@ -40,23 +44,24 @@
 
       <div class="message" id="user-message"></div>
 
-                  <form class="border eingabe" id="sign-up">
+                  <form class="border eingabe logged-out" id="sign-in">
+                    <fieldset>
+                    <legend>sign in</legend>
+                    <input type ="email" name="credentials[email]" placeholder ="email">
+                    <input type ="password" name="credentials[password]" placeholder ="password">
+                    <button type="submit">enter</button>
+                    <p>If you haven't become a member yet, click <a href ="#sign-up" id="join-toggle">here</a> to join!</p>
+                  </fieldset>
+                  </form>
+
+                  <form class="border eingabe logged-out" id="sign-up">
                     <fieldset>
                       <legend>sign up</legend>
                       <input type ="email" name="credentials[email]" placeholder ="email">
                       <input type ="password" name="credentials[password]" placeholder ="password">
                       <input type ="password" name="credentials[password_confirmation]" placeholder ="confirm password">
-                      <button type="submit">sign up</button>
+                      <button type="submit">join!</button>
                     </fieldset>
-                  </form>
-
-                  <form class="border eingabe" id="sign-in">
-                    <fieldset>
-                    <legend>sign in</legend>
-                    <input type ="email" name="credentials[email]" placeholder ="email">
-                    <input type ="password" name="credentials[password]" placeholder ="password">
-                    <button type="submit">sign in</button>
-                  </fieldset>
                   </form>
 
                   <form class="border eingabe" id="change-password">
@@ -68,18 +73,10 @@
                      </fieldset>
                      </form>
 
-                  <form class="border eingabe" id="sign-out">
-                    <fieldset>
-                      <button type="submit">sign out</button>
-                    </fieldset>
-                  </form>
-
-      <div class="container logged-in eingabe" style="margin-top:30px">
+      <div class="container logged-in eingabe " style="margin-top:30px">
         <div class="row">
-          <div class="col-sm-4">
-
-            <h2>Gig Maker</h2>
-            <h5>Make a gig!</h5>
+          <div class="col-sm-4" id="verwaltung">
+            <h2>Control Panel</h2>
             <form class="border eingabe" id="gig-finder">
               <fieldset>
                 <input type ="integer" name="gigs[id]" placeholder ="gig id">
@@ -87,7 +84,7 @@
               </fieldset>
             </form>
 
-            <form class="border logged-in eingabe" id="gig-index">
+            <form class="border eingabe" id="gig-index">
               <fieldset>
                 <button type="submit">index</button>
               </fieldset>
@@ -131,9 +128,6 @@
 
           <div class="col-sm-8 logged-in">
 
-            <h2>USER NAME</h2>
-            <h5>Member of band X</h5>
-
             <h3>Gig Display:</h3>
             <ul class="nav nav-pills flex-column">
             <div class="col-sm-8 eingabe" id="gigs-display"></div>
@@ -141,8 +135,6 @@
             <hr class="d-sm-none">
 
             <br>
-            <h2>Another div?</h2>
-            <h5></h5>
 
         </div>
       </div>
@@ -150,7 +142,6 @@
 
       <footer>
         <div class="jumbotron text-center" style="margin-bottom:0">
-          <p>Footer</p>
           <h6>Impressum</h6>
           <p>Michael Francis H Brown </p>
           <p>Somerville, MA </p>

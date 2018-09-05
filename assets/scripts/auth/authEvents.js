@@ -41,12 +41,25 @@ const onSignOut = function (event) {
   }
 
 //
+const onJoinToggle = function () {
+  $('#sign-up').show()
+  $('#sign-up input').val('')
+}
+
+//
+const onSettingsToggle = function () {
+  $('.verwaltung').hide()
+  $('#change-password').show()
+}
+
+//
 const authHandlers = function () {
-// target the id of the form itself
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
-  $('#sign-out').on('submit', onSignOut)
+  $('#sign-out').on('click', onSignOut)
+  $('#join-toggle').on('click', onJoinToggle)
+  $('#settings-toggle').on('click', onSettingsToggle)
 }
 
 module.exports = {
