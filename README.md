@@ -2,11 +2,15 @@
 
 
 ## Links
-Link to frontend app: https://github.com/b3m1ch4/wdi-2-front
-Link to backend app: https://github.com/b3m1ch4/wdi-2-back
+--Link to frontend app: https://github.com/b3m1ch4/wdi-2-front
+--Link to backend app: https://github.com/b3m1ch4/wdi-2-back
 
 ## List technologies used
-HTML, CSS, Javascript, JQuery and Handlebars.
+--HTML
+--CSS
+--Javascript
+--JQuery
+--Handlebars
 
 ## List unsolved problems which would be fixed in future iterations.
 -- Load form fields that a user wants to edit.
