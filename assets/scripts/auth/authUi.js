@@ -7,6 +7,7 @@ const signUpSuccess = function () {
   $('#user-message').text('registration success!')
   // $('#user-message').removeClass()
   // $('#user-message').addClass('success')
+  $('#sign-up').hide()
   $('#sign-up input').val('')
 }
 
@@ -22,11 +23,10 @@ const signUpFail = function () {
 const signInSuccess = function (response) {
   store.user = response.user
   $('#user-message').text('welcome back ' + store.user.email + ' !')
-  // $('#user-message').removeClass()
-  // $('#user-message').addClass('success')
   $('.nav-link').show()
   $('.logged-in').show()
   $('.logged-out').hide()
+  $('#sign-up').hide()
   $('#verwaltung').hide()
   $('#gigs-display').hide()
   $('#sign-in input').val('')
@@ -61,11 +61,11 @@ const signOutSuccess = function () {
   $('#user-message').text('see you again soon!')
   // $('#user-message').removeClass()
   // $('#user-message').addClass('success')
-  $('.logged-in').hide()
-  $('.logged-out').show()
+  $('.container').hide()
+  $('.settings').hide()
   $('.nav-link').hide()
-  $('#change-password').hide()
   $('#sign-up').hide()
+  $('.logged-out').show()
 }
 
 //
