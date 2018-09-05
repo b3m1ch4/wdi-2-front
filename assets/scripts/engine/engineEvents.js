@@ -46,7 +46,6 @@ let onUpdateGig = function (event) {
 const onDeleteGig = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  console.log("data is", data)
   engineApi.deleteGig(data)
   .then(engineUi.deleteSuccess)
   .catch(engineUi.apiFail)
