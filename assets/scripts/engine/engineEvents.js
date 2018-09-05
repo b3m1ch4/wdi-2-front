@@ -27,7 +27,7 @@ const onAllGigs = function (event) {
 const onFindGig = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  store.search = data
+  // store.search = data
   engineApi.oneGig(data)
   .then(engineUi.findSuccess)
   .catch(engineUi.apiFail)
@@ -56,7 +56,6 @@ const onFindGig = function (event) {
 const onDeleteGig = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  store.search = data
   engineApi.deleteGig(data)
   .then(engineUi.deleteSuccess)
   .catch(engineUi.apiFail)

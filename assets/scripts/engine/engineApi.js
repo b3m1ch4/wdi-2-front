@@ -53,9 +53,8 @@ const patchGig = function (data) {
 /* ===== delete a gig ===== */
 const deleteGig = function (data) {
   return $.ajax({
-    url: config.apiUrl + data.gigs.id,
     method: 'DELETE',
-    data,
+    url: config.apiUrl + '/gigs/' + data.gigs.id,
     headers: {
       'Authorization': 'Token token=' + store.user.token
     }

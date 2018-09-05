@@ -38,7 +38,7 @@ const apiUpdate = function (response) {
 }
 /* ===== delete a gig ===== */
 const deleteSuccess = function () {
-  $('#gigs-display').html("this event was successfully deleted")
+  $('#user-message').html("this event was successfully deleted")
   $('.eingabe input').val('')
 }
 
