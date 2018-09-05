@@ -1,3 +1,10 @@
+## Introduction
+
+
+## Links
+Link to frontend app: https://github.com/b3m1ch4/wdi-2-front
+Link to backend app: https://github.com/b3m1ch4/wdi-2-back
+
 ## List technologies used
 HTML, CSS, Javascript, JQuery and Handlebars.
 
@@ -7,7 +14,6 @@ HTML, CSS, Javascript, JQuery and Handlebars.
 
 ## Document your planning and tell a story about your development process and problem-solving strategy.
 -- Wireframes
-
 
 ## [License](LICENSE)
 
