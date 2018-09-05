@@ -6,7 +6,7 @@ const showGigsTemplate = require('../templates/helpers/gig-listing.handlebars')
 
 /* ===== failure to connect to server ===== */
 const apiFail = function (event) {
-    $('#user-message').html('Hopla! There was a problem connecting to the server.')
+    $('#user-message').html('hopla! something went wrong. please try again')
     $('.eingabe input').val('')
 }
 

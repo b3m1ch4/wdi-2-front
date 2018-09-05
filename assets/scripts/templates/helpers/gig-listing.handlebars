@@ -2,19 +2,19 @@
 {{#each gigs as |gig|}}
 
   <div class="row">
-    <h4 data-id="{{gig.id}}"> ID: {{gig.id}} Title: {{gig.title}} </h4>
+    <h4 data-id="{{gig.id}}"> id: {{gig.id}} title: {{gig.title}} </h4>
     {{#if gig.id}}
-       Date: {{gig.date}}
-       Time: {{gig.texttime}}
-       Description: {{gig.description}}
-       Gig creator: {{gig.user.email}}
+       date: {{gig.date}}
+       time: {{gig.texttime}}
+       description: {{gig.description}}
+       gig creator: {{gig.user.email}}
 
     {{else}}
-      <p> Please note, the gig you've requested is incomplete. </p>
+      <p> please note, the gig you've requested is incomplete. </p>
     {{/if}}
   </div>
 {{/each}}
 
 {{else}}
-  There are no gigs at the moment
+  there are no gigs at the moment
 {{/if}}
