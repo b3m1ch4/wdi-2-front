@@ -24,10 +24,12 @@ const signInSuccess = function (response) {
   $('#user-message').text('welcome back ' + store.user.email + ' !')
   $('#user-message').removeClass()
   $('#user-message').addClass('success')
-  $('#sign-in input').val('')
   $('.nav-link').show()
   $('.logged-in').show()
   $('.logged-out').hide()
+  $('#verwaltung').hide()
+  $('#gigs-display').hide()
+  $('#sign-in input').val('')
 }
 
 //
@@ -63,6 +65,7 @@ const signOutSuccess = function () {
   $('.logged-out').show()
   $('.nav-link').hide()
   $('#change-password').hide()
+  $('#sign-up').hide()
 }
 
 //

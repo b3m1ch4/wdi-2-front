@@ -68,6 +68,9 @@ const onComposeToggle = function () {
   $('#gig-changer').hide()
   $('#gig-deleter').hide()
   $('#gig-maker').show()
+  $('#verwaltung').show()
+  $('#gigs-display').hide()
+  $('#change-password').hide()
   $('#sign-up input').val('')
   }
 
@@ -77,6 +80,9 @@ const onCueToggle = function () {
   $('#gig-changer').hide()
   $('#gig-deleter').hide()
   $('#gig-maker').hide()
+  $('#verwaltung').show()
+  $('#gigs-display').show()
+  $('#change-password').hide()
   $('#sign-up input').val('')
 }
 
@@ -86,6 +92,9 @@ const onModulateToggle = function () {
   $('#gig-changer').show()
   $('#gig-deleter').show()
   $('#gig-maker').hide()
+  $('#verwaltung').show()
+  $('#gigs-display').hide()
+  $('#change-password').hide()
   $('#sign-up input').val('')
 }
 
