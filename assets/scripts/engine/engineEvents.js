@@ -7,7 +7,7 @@ let engineUi = require('./engineUi.js')
 let store = require('../store.js')
 
 /* ===== create one gig ===== */
-let onNewGig = function (event) {
+const onNewGig = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   engineApi.newGig(data)
@@ -34,7 +34,7 @@ const onFindGig = function (event) {
 }
 
 /* ===== update one gig ===== */
-let onUpdateGig = function (event) {
+const onUpdateGig = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   engineApi.patchGig(data)

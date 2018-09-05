@@ -5,8 +5,7 @@ let store = require('../store')
 const showGigsTemplate = require('../templates/helpers/gig-listing.handlebars')
 
 /* ===== failure to connect to server ===== */
-const apiFail = function (response) {
-    response.preventDefault()
+const apiFail = function (event) {
     $('#user-message').html('Hopla! There was a problem connecting to the server.')
     $('.eingabe input').val('')
 }

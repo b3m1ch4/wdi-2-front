@@ -3,15 +3,14 @@
 
   <div class="row">
     <h4 data-id="{{gig.id}}"> ID: {{gig.id}} Title: {{gig.title}} </h4>
-    {{#if gig.date}}
+    {{#if gig.id}}
        Date: {{gig.date}}
-       Time: {{gig.time}}
        Time: {{gig.texttime}}
        Description: {{gig.description}}
        Gig creator: {{gig.user.email}}
 
     {{else}}
-      <p> Please note, the request you made could not be processed. </p>
+      <p> Please note, the gig you've requested is incomplete. </p>
     {{/if}}
   </div>
 {{/each}}
