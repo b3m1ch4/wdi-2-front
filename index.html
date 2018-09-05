@@ -15,28 +15,28 @@
 
       <div class="jumbotron text-center" style="margin-bottom:0">
         <h1>bandmate event tracker</h1>
-        <p>Herd all of those crazy musicians!</p>
+        <p>herd all of those crazy musicians!</p>
       </div>
 
       <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-        <a class="navbar-brand" href="#">Bandmate</a>
+        <a class="navbar-brand" href="#">bandmate</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="collapsibleNavbar">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#" id="compose-toggle">Compose</a>
+              <a class="nav-link logged-in" href="#verwaltung" id="compose-toggle">compose</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="cue-toggle">Cue</a>
+              <a class="nav-link logged-in" href="#verwaltung" id="cue-toggle">cue</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="modulate-toggle">Modulate</a>
+              <a class="nav-link logged-in" href="#verwaltung" id="modulate-toggle">modulate</a>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="settings-toggle">Settings</a>
+              <a class="nav-link logged-in" href="#verwaltung" id="settings-toggle">settings</a>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="sign-out">Sign Out</a>
+              <a class="nav-link logged-in" href="#user-message" id="sign-out">sign out</a>
             </li>
           </ul>
         </div>
@@ -50,11 +50,11 @@
                     <input type ="email" name="credentials[email]" placeholder ="email">
                     <input type ="password" name="credentials[password]" placeholder ="password">
                     <button type="submit">enter</button>
-                    <p>If you haven't become a member yet, click <a href ="#sign-up" id="join-toggle">here</a> to join!</p>
+                    <p>if you haven't become a member yet, click <a href ="#sign-up" id="join-toggle">here</a> to join!</p>
                   </fieldset>
                   </form>
 
-                  <form class="border eingabe logged-out" id="sign-up">
+                  <form class="border eingabe hide" id="sign-up">
                     <fieldset>
                       <legend>sign up</legend>
                       <input type ="email" name="credentials[email]" placeholder ="email">
@@ -64,7 +64,7 @@
                     </fieldset>
                   </form>
 
-                  <form class="border eingabe" id="change-password">
+                  <form class="border eingabe settings" id="change-password">
                        <fieldset>
                        <legend>change password</legend>
                        <input type ="password" name="passwords[old]" placeholder ="old password">
@@ -73,10 +73,10 @@
                      </fieldset>
                      </form>
 
-      <div class="container logged-in eingabe " style="margin-top:30px">
+      <div class="container eingabe " style="margin-top:30px">
         <div class="row">
           <div class="col-sm-4" id="verwaltung">
-            <h2>Control Panel</h2>
+            <h2>control panel</h2>
             <form class="border eingabe" id="gig-finder">
               <fieldset>
                 <input type ="integer" name="gigs[id]" placeholder ="gig id">
@@ -126,7 +126,7 @@
           </div>
 
 
-          <div class="col-sm-8 logged-in" id="gigs-display">
+          <div class="col-sm-8" id="gigs-display">
             <h3>Gig Display:</h3>
             <ul class="nav nav-pills flex-column">
             <div class="col-sm-8 eingabe"></div>

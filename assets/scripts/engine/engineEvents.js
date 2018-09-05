@@ -52,6 +52,9 @@ const onDeleteGig = function (event) {
   .catch(engineUi.apiFail)
 }
 
+// $('#user-message').removeClass()
+// $('#user-message').addClass('success')
+
 /* ===== toggles ===== */
 const onComposeToggle = function () {
   $('.eingabe input').val('')

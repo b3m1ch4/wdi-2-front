@@ -48,8 +48,7 @@ const onJoinToggle = function () {
 
 //
 const onSettingsToggle = function () {
-  $('#verwaltung').hide()
-  $('#gigs-display').hide()
+  $('.container').hide()
   $('#change-password').show()
 }
 

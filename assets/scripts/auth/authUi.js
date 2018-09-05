@@ -59,8 +59,8 @@ const changePasswordFail = function () {
 //
 const signOutSuccess = function () {
   $('#user-message').text('see you again soon!')
-  $('#user-message').removeClass()
-  $('#user-message').addClass('success')
+  // $('#user-message').removeClass()
+  // $('#user-message').addClass('success')
   $('.logged-in').hide()
   $('.logged-out').show()
   $('.nav-link').hide()
@@ -71,8 +71,8 @@ const signOutSuccess = function () {
 //
 const signOutFail = function () {
   $('#user-message').text('your request could not be completed')
-  $('#user-message').removeClass()
-  $('#user-message').addClass('fail')
+  // $('#user-message').removeClass()
+  // $('#user-message').addClass('fail')
 }
 
 //
