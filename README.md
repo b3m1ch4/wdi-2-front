@@ -39,6 +39,15 @@ communicate these issues with my instructors and classmates. It is one thing to 
 able to intuit what is likely wrong with my own code, but it is another to communicate
 that intuition to another in an effort to troubleshoot what the problem is.
 
+## User stories
+As a user, I expect to be able to
+- signup, signin, change my password and signout
+- create a gig
+- view all gigs
+- view a single gig
+- edit a gig
+- delete a gig
+
 ## Wireframes
 - https://i.imgur.com/LY58h2F.jpg
 - https://i.imgur.com/qXbfBwu.jpg
