@@ -10,6 +10,12 @@ const apiFail = function (event) {
     $('.eingabe input').val('')
 }
 
+/* ===== check for empty string ===== */
+const checkEmpty = function () {
+  $('#user-message').html("hopla! don't forget to give your event a title and description")
+  $('.eingabe input').val('')
+}
+
 /* ===== create one gig ===== */
 const createSuccess = function () {
   $('#user-message').html("the event was successfully created!")
@@ -44,6 +50,7 @@ const deleteSuccess = function () {
 //
 module.exports = {
   apiFail,
+  checkEmpty,
   createSuccess,
   indexSuccess,
   findSuccess,

@@ -10,9 +10,12 @@ let store = require('../store.js')
 const onNewGig = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
-  engineApi.newGig(data)
-  .then(engineUi.createSuccess)
-  .catch(engineUi.apiFail)
+  if (data.gig.title !== '' && data.gig.description !== '') {
+    engineApi.newGig(data)
+    .then(engineUi.createSuccess)
+    .catch(engineUi.apiFail)
+  }
+    else engineUi.checkEmpty()
 }
 
 /* ===== show all gigs ===== */
