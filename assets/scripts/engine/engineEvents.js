@@ -11,6 +11,7 @@ const onNewGig = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   if (data.gig.title !== '' && data.gig.description !== '') {
+    console.log(data.gig.title)
     engineApi.newGig(data)
     .then(engineUi.createSuccess)
     .catch(engineUi.apiFail)
